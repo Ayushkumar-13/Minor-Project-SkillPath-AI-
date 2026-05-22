@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-gray-100 font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(3, 5, 10, 0.5) 0px, transparent 100%);
+  }
+
+  /* Sleek custom scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cyber-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyber-card/80 border border-cyber-primary/20 rounded-full hover:bg-cyber-primary/60 transition-colors;
+  }
+}
+
+/* Glassmorphism Panel utilities */
+.glass-panel {
+  @apply bg-[#0D1324]/60 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)];
+}
+
+.glass-panel-glow-cyan {
+  @apply bg-[#0D1324]/60 backdrop-blur-xl border border-cyber-primary/30 shadow-[0_0_15px_rgba(6,182,212,0.15)];
+}
+
+.glass-panel-glow-purple {
+  @apply bg-[#0D1324]/60 backdrop-blur-xl border border-cyber-secondary/30 shadow-[0_0_15px_rgba(139,92,246,0.15)];
+}
+
+/* Cyber text glow */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Tech grid overlay */
+.tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Slow spin animation — subtle, elegant 6s rotation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
