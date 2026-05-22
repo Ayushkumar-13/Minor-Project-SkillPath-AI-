@@ -50,9 +50,9 @@ export const Login = ({ onNavigate }) => {
               <Cpu className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-black mt-4 text-white tracking-wide">
-              WELCOME BACK <span className="text-cyber-primary">OPERATIVE</span>
+              SIGN IN TO <span className="text-cyber-primary">YOUR ACCOUNT</span>
             </h2>
-            <p className="text-gray-500 text-xs mt-1 uppercase tracking-widest">Identify to synchronize profile</p>
+            <p className="text-gray-500 text-xs mt-1 uppercase tracking-widest">Enter your credentials to access your roadmap</p>
           </div>
 
           {/* Form */}
@@ -90,7 +90,7 @@ export const Login = ({ onNavigate }) => {
             {/* Password Field */}
             <div className="space-y-1.5">
               <div className="flex justify-between items-center">
-                <label className="text-xs text-gray-400 uppercase tracking-widest font-bold">Access Cipher</label>
+                <label className="text-xs text-gray-400 uppercase tracking-widest font-bold">Password</label>
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-500">
@@ -123,22 +123,22 @@ export const Login = ({ onNavigate }) => {
               {loading ? (
                 <>
                   <Loader2 className="w-4.5 h-4.5 animate-spin" />
-                  Verifying Identity...
+                  Signing In...
                 </>
               ) : (
-                'Synchronize Session'
+                'Sign In'
               )}
             </button>
           </form>
 
           {/* Footer Navigation */}
           <div className="mt-8 pt-6 border-t border-white/5 text-center text-sm text-gray-500">
-            Need an active license?{' '}
+            Don't have an account?{' '}
             <button 
               onClick={() => onNavigate('signup')}
               className="text-cyber-primary font-bold hover:underline"
             >
-              Request Access
+              Create Account
             </button>
           </div>
 

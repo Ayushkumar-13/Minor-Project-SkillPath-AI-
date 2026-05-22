@@ -19,7 +19,7 @@ export const Signup = ({ onNavigate }) => {
       return;
     }
     if (password.length < 6) {
-      setErrMessage('Security cipher must be at least 6 characters.');
+      setErrMessage('Password must be at least 6 characters.');
       return;
     }
     
@@ -55,9 +55,9 @@ export const Signup = ({ onNavigate }) => {
               <Cpu className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-black mt-4 text-white tracking-wide">
-              CREATE CORE <span className="text-cyber-primary">IDENTITY</span>
+              CREATE YOUR <span className="text-cyber-primary">ACCOUNT</span>
             </h2>
-            <p className="text-gray-500 text-xs mt-1 uppercase tracking-widest">Register your operative licenses</p>
+            <p className="text-gray-500 text-xs mt-1 uppercase tracking-widest">Join SkillPath AI and start your personalized journey</p>
           </div>
 
           {/* Form */}
@@ -76,7 +76,7 @@ export const Signup = ({ onNavigate }) => {
 
             {/* Operator Name */}
             <div className="space-y-1">
-              <label className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Operator Name</label>
+              <label className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Full Name</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-500">
                   <User className="w-4 h-4" />
@@ -110,9 +110,9 @@ export const Signup = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Cipher Password */}
+            {/* Password */}
             <div className="space-y-1">
-              <label className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Security Cipher</label>
+              <label className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-500">
                   <Lock className="w-4 h-4" />
@@ -144,22 +144,22 @@ export const Signup = ({ onNavigate }) => {
               {loading ? (
                 <>
                   <Loader2 className="w-4.5 h-4.5 animate-spin" />
-                  Building Profile...
+                  Creating Account...
                 </>
               ) : (
-                'Generate Operator Access'
+                'Create Account'
               )}
             </button>
           </form>
 
           {/* Redirection link */}
           <div className="mt-6 pt-5 border-t border-white/5 text-center text-sm text-gray-500">
-            Already hold active credentials?{' '}
+            Already have an account?{' '}
             <button 
               onClick={() => onNavigate('login')}
               className="text-cyber-primary font-bold hover:underline"
             >
-              Synchronize
+              Sign In
             </button>
           </div>
 
